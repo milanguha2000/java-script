@@ -28,11 +28,13 @@ let gameCounter1 = 100
 ++gameCounter1
 console.log(gameCounter1);
 
+
+//postfi.. & prefi.. in javascript
 let a = 3
-const b = a++
-console.log(`a:${a} , b:${b}`);
+const b = a++                           
+console.log(`a:${a} , b:${b}`);         //a:4 , b:3
 
 let p = 3
 const q = ++p
-console.log(`p:${p} , q:${q}`);
+console.log(`p:${p} , q:${q}`);         //p:4 , q:4
 
