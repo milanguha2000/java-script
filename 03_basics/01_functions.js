@@ -59,7 +59,7 @@ function UserMessage(username){
 }
 console.log(UserMessage())
 
-//++++++++++++++++++++++ Using a default value if no value is given +++++++++++++++++++++
+//++++++++++++++++++++++ Using a default value if no value is given by user +++++++++++++++++++++
 
 function UserMessageOne(username = "SAM"){
     if(username === undefined){                     //if(!username){}  : same statement as line no 65
