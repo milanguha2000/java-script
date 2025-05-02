@@ -69,3 +69,62 @@ function UserMessageOne(username = "SAM"){
     return`${username} just logged in`
 }
 console.log(UserMessageOne())
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// function calculateCartPrice(...num1){
+//     return num1
+// }
+// console.log(calculateCartPrice(200,400,600,800));   //output :[200, 400, 600, 800]
+
+
+function calculateCartPrice(val1, val2,...num1){
+    return num1
+}
+console.log(calculateCartPrice(200,400,600,800));   
+// in this statement 200 value goes to val1 and 400 value goes to val2 and rest of value goes to in array.
+//output : [600, 800]
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// creating a function by using object datatype
+
+const user = {
+    username : "milan",
+    price : 200
+}
+function handleObject(anyobject){
+    console.log(`user name is ${anyobject.username} and price is ${anyobject.price}`);
+}
+handleObject(user)
+
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+function handleObject(anyobject){
+    console.log(`user name is ${anyobject.username} and price is ${anyobject.price}`);
+}
+handleObject({
+    username:"guha",
+    price : 500
+})
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//creating a function by using a array datatype
+
+const myNewArray = [100, 500 , 1000 , 2000]
+
+function returnArrayValue(getarray){
+    return getarray[1]
+}
+console.log(returnArrayValue(myNewArray))  //output : 500
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+function returnArrayValue(getarray){
+    return getarray[1]
+}
+console.log(returnArrayValue([1000 , 2000 , 3000 , 4000])) //output : 2000
