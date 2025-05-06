@@ -67,3 +67,31 @@ if(loggedInFromGoogle || loggedInFromEmail){
     console.log("user logged in");
     
 }
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Nullish Coalescing Operator (??) : null , undefined
+
+/*
+ if we assaign the two number in a variable then this operator print the first value .
+ if we assign a null value and a number value then this operator print the number value .
+ if we assign a undefined value and a number value then this operator print the number value .
+*/
+let val1;
+
+//val1 = 5 ?? 10        // output : 5
+//val1 = null ?? 10     // output : 10
+//val1 = undefined ?? 15  //output : 15
+val1 = null ?? 10 ?? 20   //output : 10 ,because this operator ignore the null and print the first number.
+
+console.log(val1);
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Terniary Operator
+// Condition ? true : false
+
+const teaPrice = 100
+
+teaPrice <= 80 ? console.log("less than 80") : console.log("greater than 80");
+
