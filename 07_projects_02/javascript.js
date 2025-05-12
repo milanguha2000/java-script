@@ -12,10 +12,10 @@ form.addEventListener('submit' , function(e){
 
     if (length === '' || length <= 0 || isNaN(length)) {
         result.innerHTML = 'please give a valid length'
-    }else if(width <= 0 || isNaN(width)) {
+    }else if(width === '' || width <= 0 || isNaN(width)) {
         result.innerHTML = 'please give a valid width'
     }else{
         const cal = (2*(length+width)).toFixed(2)
-        result.innerHTML=cal
+        result.innerHTML=`The Parametar is : <span> ${cal} </span>`
     }
 })
