@@ -18,8 +18,10 @@ body{
 #results {
   font-size: 35px;
   margin-left: 90px;
+  margin-right: 90px;
   margin-top: 20px;
-  color: blue
+  color: black;
+  background-color: pink;
 }
 button{
     font-size: 30px;
