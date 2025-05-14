@@ -3,18 +3,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    padding-top: 150px;
     background-color: #282c34;
     color: white;
 }
 .center {
     text-align: center;
+    font-size: 50px;
 }
 #Clock {
-    font-size: 48px;
-    background: pink;
+    font-size: 30px;
+    background-color: pink;
+    color: black;
     padding: 20px 100px;
     margin-top: 20px;
-    border-radius: 10px;
+    border-radius: 50px;
+
 }
