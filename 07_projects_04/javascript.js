@@ -19,7 +19,7 @@ if(playGame){
     submit.addEventListener('click' , function(e){
         e.preventDefault()
         const guess = Math.floor(userInput.value)
-        console.log(guess);
+        // console.log(guess);
         validateGuess(guess)
     })
 
