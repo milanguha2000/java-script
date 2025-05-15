@@ -34,7 +34,7 @@ function validateGuess(guess){
         prevGuess.push(guess)
         if(numOfGuess === 10){
             displayGuess(guess)
-            displayMessage(`Game Over . Random Number was ${randomNumber}`)
+            displayMessage(`Game Over .You can't guess the Number .<br> Random Number was ${randomNumber}`)
             endGame()
         }else{
             displayGuess(guess)

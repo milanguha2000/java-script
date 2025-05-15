@@ -4,6 +4,7 @@ html{
 body{
     background-color: grey;
     text-align: center;
+    height: 650px;
 }
 #wrapper{
     font-size: 20px;
@@ -57,6 +58,4 @@ p{
     color: red;
     border-radius: 20px;
     margin: auto;
-
-
 }
