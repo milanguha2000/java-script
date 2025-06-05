@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Event</title>
+</head>
+<body style="background-color: grey; color: black;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="150" id="dhoni" src="dhoni.jpg" alt="dhoni"></li>
+            <li><img width="150" id="kohli" src="kohli.jpg" alt=""></li>
+            <li><img width="150" id="rohit" src="rohit.jpg" alt=""></li>
+            <li><img width="150" id="kl" src="kl.jpg" alt=""></li>
+            <li><img width="150" id="jadeja" src="jadeja.jpg" alt=""></li>
+            <li><a style="color: black;" href="https://www.google.co.in/" id="google">Google</a></li>
+        </ul>
+    </div>
+
+    <script>
+        // we don't use this approach. 
+
+        // document.getElementById('rohit').onclick = function(){
+        //     alert('rohit clicked')
+        // }
+
+
+        
+        //if we are using false(default) then it will return first child , then it will return parents.
+        /*
+        output : clicked on rohit
+                 click inside ul
+        */
+        // document.getElementById('images').addEventListener('click' , function(e){
+        //     console.log("click iside ul");
+        // },false)
+
+        // document.getElementById('rohit').addEventListener('click' , function(e){
+        //     console.log("clicked on rohit");
+        //     e.stopPropagation()     //if we want to stop the parent then we will use stopPropagation() method. output : clicked on rohit
+        // },false)
+
+
+        
+        //if we are using true then it will return first parent, then it will return child.
+        /*
+        output : click inside ul
+                 clicked on rohit
+        */
+        // document.getElementById('images').addEventListener('click' , function(e){
+        //     console.log("click iside ul");
+        // },true)
+
+        // document.getElementById('rohit').addEventListener('click' , function(e){
+        //     console.log("clicked on rohit");
+        // },true)
+
+        
+        
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        //preventDefault()
+
+        document.getElementById('google').addEventListener('click' , function(e){
+            e.preventDefault()      //if we use preventDefault()method , then if we click on Google then it will not open the Google. 
+            e.stopPropagation()     //stopPropagation() method stop the parent , it will stop the output : 'click inside ul' . 
+            console.log("clicked on google");       //output : clicked on google
+        },false)
+
+
+
+        //++++++++++++++++++++++++++++++++++++++++++++++++++++++ project ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // if we want to do , if we click on image then image will remove
+
+        document.querySelector('#images').addEventListener('click' , function(e){
+            // console.log(e);
+            // console.log(e.target);
+            // console.log(e.target.parentNode);
+
+            // const removeIt = e.target.parentNode
+            // removeIt.remove()
+            // //removeIt.parentNode.removeChild(removeIt) 
+
+            console.log(e.target.tagName);
+            if(e.target.tagName === 'IMG'){
+                console.log(e.target.id);
+                const removeIt = e.target.parentNode
+                removeIt.remove()
+            }
+            
+        })
+
+    </script>
+</body>
+</html>
